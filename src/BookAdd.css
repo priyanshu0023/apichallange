@@ -1,0 +1,101 @@
+/* Modal Container */
+.ui.modal {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    max-width: 600px !important;
+    width: 90%;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeInScale 0.3s ease-out;
+}
+
+/* Modal Entry Animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Modal Content */
+.ui.modal .content {
+    overflow: hidden;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 3px solid #2a84d2;
+    border-bottom: 3px solid #2a84d2;
+}
+
+/* Input Fields */
+.ui.modal .field > input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ui.modal .field > input:focus {
+    border-color: #2a84d2;
+    box-shadow: 0 0 8px rgba(42, 132, 210, 0.4);
+    outline: none;
+}
+
+/* Modal Header */
+.ui.modal .header {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    color: #2a84d2;
+    padding: 15px 0;
+    background: linear-gradient(to right, #2a84d2, #45a049);
+    color: white;
+}
+
+/* Buttons */
+.ui.modal .ui.button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #2a84d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+.ui.modal .ui.button:hover {
+    background-color: #1a73b8;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ui.modal {
+        max-width: 90%;
+    }
+
+    .ui.modal .header {
+        font-size: 1.5em;
+    }
+
+    .ui.modal .ui.button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
